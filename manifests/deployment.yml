@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: puneetdevadigapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: puneetdevadigapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: puneetdevadigapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: puneetdevadigapipelinesjavascriptdocker 
+          image: aksacrpd2025.azurecr.io/puneetdevadigapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
